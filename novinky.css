@@ -1,0 +1,281 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  
+}
+body
+{
+  min-height: 100%;
+  background: url("2149f169b237958026f8ca241179a523.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+  background-size: cover;
+}
+
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10% ;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before
+{
+  content:'';
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(25px);
+    z-index: -1;
+}
+.navbar a 
+{
+  font-family: Tahoma;
+    text-decoration: none;
+    color: white;
+   font-size: 20px;
+   font-weight: 600;
+   margin-left: 20px;
+   text-shadow: 2px 2px 4px rgb(2, 247, 255);
+}
+#check
+{
+  display:none;
+}
+
+.hamBT
+{
+    position: absolute;
+    right: 5%;
+    display: none;
+   color: white;
+   padding: 15px;
+   font-size: 30px;
+   cursor: pointer;
+}
+
+i
+{
+  color: white;
+}
+
+.TextFS22
+{
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+  font-family:Arial;
+ z-index: 1;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+h1
+{
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  cursor: default;
+  font-size: clamp(20px, 7vw, 62px);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgb(2, 247, 255);
+}
+h2
+{
+    text-align: center;
+    font-weight: 600;
+    color: #04ddfaee;
+    cursor: default;
+    font-size: clamp(20px, 7vw, 40px);
+}
+.social
+{
+  position: relative;
+  width: max-content;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin: auto;
+  padding: 10px;
+  z-index: 1;
+  border: black;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(25px);
+  cursor: pointer;
+}
+.social  ul 
+{
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+}
+.social  li
+{
+  display: inline;
+}
+.bx 
+{
+  font-size: clamp(25px, 7vw, 30px)
+}
+.Novinky
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 1000px;
+    width: 80%;
+    height: auto;
+    justify-content: space-between;
+    
+}
+
+article
+{
+  position: relative;
+  margin: auto;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+}
+article > .newsObr
+{
+  
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+.TextNews
+{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.6s;
+}
+.TextNews > p
+{
+text-align: center;
+font-size: 15px;
+}
+.TextNews:hover
+{
+  opacity: 1;
+}
+ h3
+{
+    margin:10px;
+    font-size: 30px;
+    cursor: default;
+}
+@media (max-width: 1000px)
+{
+  article
+  {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+}
+@media (max-width: 800px) 
+{
+  .header
+  {
+    padding: 20px 5%;
+  }
+  article
+  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) 
+{
+  .hamBT
+  {
+    display: inline-flex;
+  }
+#check:checked~.hamBT #menu
+{
+  display: block;
+}
+  .navbar
+  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: .4s ease;
+  }
+
+  #check:checked~.navbar
+{
+  padding-top: 10px;
+  height: 200px;
+}
+  .navbar a 
+  {
+    display: block;
+    font-size: 18px;
+    margin: 18px 0;
+    text-align: center;
+  }
+}
+
+footer
+{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+  padding: 20px 10%;
+  margin-top: 150px;
+  font-size: clamp(10px, 7vw, 20px);
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(10px); 
+  font-family:Arial, Helvetica, ;
+  cursor: default;
+  
+}
+footer > a
+{
+  font-size: clamp(10px, 7vw, 18px);
+  color: #ffffff56;
+}
+.konec
+{
+  color: #ffffff8f;
+  font-family: Tahoma;
+}
